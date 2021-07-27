@@ -1,12 +1,20 @@
 
 public class Funcoes {
-	public static void somarCarrinho(double[] produtos) {
+	
+	public static boolean login(String user, String password) {
+		if (user.equalsIgnoreCase("COMPRADOR") && password.equals("123")) {
+			return true;
+		}
+		return false;
+	}
+	
+	public static double somarCarrinho(double[] produtos) {
 		double soma = 0;
 		for(int i=0; i<produtos.length;i++) {
 			soma = soma + produtos[i];
 		}
-		
-		System.out.println("O total do carrinho é R$" + soma);
+		return soma;
+		//System.out.println("O total do carrinho é R$" + soma);
 	}
 	
 	public static void exibirMenu() {
